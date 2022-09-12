@@ -1,30 +1,60 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Full-Stack App "Color4Kids" (Nest, postgreSQL, Vue/React)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Motivation
+Since I wanted to utilise the advantages of building the server-side on a relational database, I built the backend for the coloring API using RESTful API with ExpressJS and PostgreSQL in May 2022. I never built the client-side to consume the endpoints served though.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Now I want to implement a full-stack app and this way further develop my skills as a full-stack web developer. That is why I want to build the backend and frontend from scratch - despite an existing backend. This is the tech I decided on:
 
-## Description
+#### Frontend
+HTML, TypeScript, Vue.js or React, CSSTailwind
+#### Backend
+TypeScript, Nestjs, GraphQL, PostgreSQL
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Objective
+
+The objective of this project is to build a full-stack app, which allows users to print out images from children movies for coloring. Therefore, the app displays a list of animated movies, which can be filtered by title or by specific key-words. The selected images can then be printed or downloaded.At a later stage a login will be added, so that authorized users can upload images.
+
+
+## User Stories
+
+As a user, I want to be able to see a list of children cartoons and filter them, so that I can find the ones I am interested in.
+
+As a user, I want to see a list of pictures from one cartoon and filter them, so that I can choose which pictures I want to print.
+
+As a user, I want to print out a picture directly or download it to my local device, so that I can color it.
+
+As a user, I want the pictures I already printed out to be marked, so that I have an overview, which pictures I already printed or downloaded.
+
+
+#### Bonus (later project stage)
+
+As a user, I want to create a profile, so that I can save my favorite pictures to my profile and link to my favorite cartoons.
+
+As a user, I want to mark a cartoon as my favorite, so that it appears at the top of the cartoon movie list.
+
+As a user, I want to upload pictures I drew about certain children cartoons, so that they are added to the list of pictures.
+
+## Features and Acceptance Criteria
+
+The feature requirements below were extracted from the user stories listed above.
+
+#### Main view
+* Returns a list of cartoons (each listed item with titles and an exemplary cartoon picture)s
+* Sorting and filtering
+* Ability to mark a cartoon as favorite
+
+#### Single movie/cartoon view
+* Returns an introductory cartoon picture with title and one-sentence synopsys
+* Returns a list of pictures from one single cartoon (each containing a button for direct printing or download)
+* Filtering
+* Automatic mark as downloaded/printed
+
+
+## Further Information
+
+<details>
+  <summary>Click to expand!</summary>
 
 ## Installation
 
@@ -71,3 +101,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+</details>
