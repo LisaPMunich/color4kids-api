@@ -1,11 +1,24 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 
 @Controller('images')
 export class ImagesController {
   @Get()
   listImages() {}
-  @Get('/:name')
-  getImages() {}
-  @Post('/:name')
-  createImages() {}
+
+  @Get('/:name') // Method decorators
+  getImages(
+      @Param('name') name: string
+  )
+  {
+    console.log(name);
+  }
+
+  @Post('/:name') // Method decorators
+  createImages(
+      @Body() body: any,
+      @Param('name') name: string
+  )
+  {
+    console.log(body, name);
+  }
 }
