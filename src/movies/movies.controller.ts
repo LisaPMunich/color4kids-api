@@ -1,4 +1,4 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
 @Controller('movies')
 export class MoviesController {
@@ -6,5 +6,10 @@ export class MoviesController {
   listMovies() {}
 
   @Get('/:title')
-  getMovies() {}
+  getMovie(
+      @Param('title') title: string
+  )
+  {
+    console.log(title)
+  }
 }

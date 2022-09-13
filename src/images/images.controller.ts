@@ -1,4 +1,5 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { CreateImageDto } from './dtos/create-image.dto';
 
 @Controller('images')
 export class ImagesController {
@@ -6,7 +7,7 @@ export class ImagesController {
   listImages() {}
 
   @Get('/:name') // Method decorators
-  getImages(
+  getImage(
       @Param('name') name: string
   )
   {
@@ -14,8 +15,8 @@ export class ImagesController {
   }
 
   @Post('/:name') // Method decorators
-  createImages(
-      @Body() body: any,
+  createImage(
+      @Body() body: CreateImageDto,
       @Param('name') name: string
   )
   {
