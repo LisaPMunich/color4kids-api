@@ -3,7 +3,7 @@
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": true, // a little amount of type annotation is transfered to converted JavaScript
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
