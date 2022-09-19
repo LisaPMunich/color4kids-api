@@ -15,4 +15,10 @@ export class MoviesRepository {
        return movies.filter(row => row._id === id)[0];
     }
 
+    async findOneByTitle(title: string){
+        const movies = await this.findAll();
+
+        return movies.filter(row => row.title === title)[0];
+    }
+
 }

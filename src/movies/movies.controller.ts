@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 import { MoviesService } from './movies.service';
 
 
@@ -18,19 +18,29 @@ export class MoviesController {
   }
 
   @Get('/:id')
-  getMovieById(
+  async getMovieById(
       @Param('id') id: string
   )
   {
-    return this.moviesService.findOne(id);
+    const movie = await this.moviesService.findOne(id);
+
+    if(!movie){
+      throw new NotFoundException('movie with this id not found')
+    }
+    return movie
   }
 
   @Get('/title/:title')
-  getMovieByTitle(
+  async getMovieByTitle(
       @Param('title') title: string
   )
   {
-    return this.moviesService.findOne(title);
+    const movie = await this.moviesService.findOneByTitle(title);
+
+    if(!movie){
+      throw new NotFoundException('movie with this title not found')
+    }
+    return movie
   }
 
 

@@ -15,4 +15,8 @@ export class MoviesService {
         return this.moviesRepo.findOne(id);
     }
 
+    findOneByTitle(title: string){
+        return this.moviesRepo.findOneByTitle(title);
+    }
+
 }

@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, NotFoundException } from '@nestjs/common';
 import { CreateImageDto } from './dtos/create-image.dto';
 import { ImagesService } from './images.service';
 
@@ -18,19 +18,29 @@ export class ImagesController {
   }
 
   @Get('/:id') // Method decorators
-  getImageById(
+  async getImageById(
       @Param('id') id: string
   )
   {
-    return this.imagesService.findOne(id);
+    const image = await this.imagesService.findOne(id);
+
+    if(!image){
+      throw new NotFoundException('image with this id not found');
+    }
+    return image
   }
 
   @Get('/name/:name') // Method decorators
-  getImageByName(
+  async getImageByName(
       @Param('name') name: string
   )
   {
-    return this.imagesService.findOne(name);
+    const image = await this.imagesService.findOne(name);
+
+    if(!image){
+      throw new NotFoundException('image with this name not found');
+    }
+    return image
   }
 
   // @Get('/characters/:characters') // Method decorators
