@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "P1",
+    "name": "Mew",
+    "characters": [
+      "Mew"
+    ],
+    "imageURL": "https://user-images.githubusercontent.com/99111208/191046219-634363af-cca9-4922-b05b-8739fc47740b.jpg"
+  },
+  {
+    "_id": "P2",
+    "name": "Mauzi",
+    "characters": [
+      "Mauzi"
+    ],
+    "imageURL": "https://user-images.githubusercontent.com/99111208/191046188-5fe71213-8bad-47c8-8234-7d316e87688a.jpg"
+  },
+  {
+    "_id": "P3",
+    "name": "Pikachu",
+    "characters": [
+      "Pikachu"
+    ],
+    "imageURL": "https://user-images.githubusercontent.com/99111208/191046227-fc1abdaf-c2f7-46eb-89cb-37f6e45ef86b.jpg"
+  }
+]
