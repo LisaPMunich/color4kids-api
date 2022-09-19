@@ -1,6 +1,10 @@
-import { IsString } from 'class-validator';
+import { IsString, IsArray } from 'class-validator';
 
 export class CreateImageDto {
     @IsString()
-    content: string;
+    name: string;
+    @IsArray()
+    characters: string[];
+    @IsString()
+    imageURL: string;
 }

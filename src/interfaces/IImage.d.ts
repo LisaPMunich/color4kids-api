@@ -1,4 +1,6 @@
 interface IImage {
-    "Name": string;
-    "ImageURL": string;
+    _id: string;
+    name: string;
+    characters: string[];
+    imageURL: string;
 }

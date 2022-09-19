@@ -1,6 +1,7 @@
 interface IMovie {
-    "Title": string;
-    "Description": string;
-    "Images": [IImage];
+    _id: string;
+    title: string;
+    description: string;
+    images: Array<IImage>;
 }
 
